@@ -1,0 +1,33 @@
+# Aspectos introdutórios
+
+A seguir listamos algumas recomendações e compreensões importantes antes de qualquer avanço. 
+
+* Todos os indicadores listados neste livro foram construídos com apoio de linguagem R. Não é objetivo deste livro servir como um material introdutório sobre R, estatística ou ciência de dados. 
+
+* Para rodar os exemplos, é importante ter algumas bibliotecas instaladas, como o metapacote `tidyverse`, `DT`, `genderBR`, `microdatasus`, `PNADcIBGE`, `ipeadata`, `remotes`.  Para instalar um pacote basta rodar a função abaixo. Apenas o pacote `microdatasus` vai exigir uma lógica diferente, conforme ilustrado. 
+
+```{r}
+#| eval: false
+
+install.packages("DT")
+
+remotes::install_github("rfsaldanha/microdatasus")
+
+```
+
+* Algumas variáveis possuem formato de código (ex.: Código Brasileiro de Ocupações - CBO, código IBGE de municípios). Na próxima página vamos tratar destes dois casos para fins de exemplo. 
+
+## Variáveis em formato de códigos
+
+Conforme informado anteriormente, algumas variáveis possuem formato de códigos. Aqui vamos falar um pouquinho sobre o código IBGE e o código CBO. 
+
+### Código IBGE 
+
+O código IBGE é uma variável que aparece em muitas bases governamentais. Ele é, geralmente, um código composto por seis dígitos que identifica um município. Fazendo um paralelo conosco, é como se fosse um CPF do município. 
+
+Os dois primeiros dígitos geralmente são uma forma de identificação do estado. Assim, todos os municípios do Paraná, por exemplo, começam com o dígito 41. 
+
+*Atenção:* Houve um tempo que se usava um sétimo dígito, chamado dígito verificador. Porém, foi caindo em desuso. Se eventualmente você encontrar este dígito verificar, sugerimos aplicar a função de `substr`. Vamos ver como fazer isso? 
+
+
+

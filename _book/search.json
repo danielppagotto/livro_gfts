@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Aspectos introdutórios",
+    "section": "",
+    "text": "A seguir listamos algumas recomendações e compreensões importantes antes de qualquer avanço.\n\nTodos os indicadores listados neste livro foram construídos com apoio de linguagem R. Não é objetivo deste livro servir como um material introdutório sobre R, estatística ou ciência de dados.\nPara rodar os exemplos, é importante ter algumas bibliotecas instaladas, como o metapacote tidyverse, DT, genderBR, microdatasus, PNADcIBGE, ipeadata, remotes. Para instalar um pacote basta rodar a função abaixo. Apenas o pacote microdatasus vai exigir uma lógica diferente, conforme ilustrado.\n\n\ninstall.packages(\"DT\")\n\nremotes::install_github(\"rfsaldanha/microdatasus\")\n\n\nAlgumas variáveis possuem formato de código (ex.: Código Brasileiro de Ocupações - CBO, código IBGE de municípios). Na próxima página vamos tratar destes dois casos para fins de exemplo."
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Indicadores para Gestão da Força de Trabalho em Saúde",
+    "section": "",
+    "text": "Prefácio\nEste livro tem…\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "CBO_IBGE.html#código-ibge",
+    "href": "CBO_IBGE.html#código-ibge",
+    "title": "2  Variáveis em formato de códigos",
+    "section": "2.1 Código IBGE",
+    "text": "2.1 Código IBGE\nO código IBGE é uma variável que aparece em muitas bases governamentais. Ele é, geralmente, um código composto por seis dígitos que identifica um município. Fazendo um paralelo conosco, é como se fosse um CPF do município.\nOs dois primeiros dígitos geralmente são uma forma de identificação do estado. Assim, todos os municípios do Paraná, por exemplo, começam com o dígito 41.\nAtenção: Houve um tempo que se usava um sétimo dígito, chamado dígito verificador. Porém, foi caindo em desuso. Se eventualmente você encontrar este dígito verificar, sugerimos aplicar a função de substr. Vamos ver como fazer isso?"
+  },
+  {
+    "objectID": "intro.html#variáveis-em-formato-de-códigos",
+    "href": "intro.html#variáveis-em-formato-de-códigos",
+    "title": "1  Aspectos introdutórios",
+    "section": "1.1 Variáveis em formato de códigos",
+    "text": "1.1 Variáveis em formato de códigos\nConforme informado anteriormente, algumas variáveis possuem formato de códigos. Aqui vamos falar um pouquinho sobre o código IBGE e o código CBO.\n\n1.1.1 Código IBGE\nO código IBGE é uma variável que aparece em muitas bases governamentais. Ele é, geralmente, um código composto por seis dígitos que identifica um município. Fazendo um paralelo conosco, é como se fosse um CPF do município.\nOs dois primeiros dígitos geralmente são uma forma de identificação do estado. Assim, todos os municípios do Paraná, por exemplo, começam com o dígito 41.\nAtenção: Houve um tempo que se usava um sétimo dígito, chamado dígito verificador. Porém, foi caindo em desuso. Se eventualmente você encontrar este dígito verificar, sugerimos aplicar a função de substr. Vamos ver como fazer isso?"
+  }
+]
