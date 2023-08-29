@@ -1,7 +1,24 @@
-# Summary
+# Modelo teórico
 
-In summary, this book has no content whatsoever.
+Com o passar dos anos tivemos um avanço de propostas de indicadores sobre força de trabalho em saúde.
 
-```{r}
-1 + 1
-```
+Vamos partir do modelo proposto por Sondereger (2021).
+
+Vamos focar especificamente nos processos da força de trabalho em saúde (coluna verde) e ao elemento disponibilidade sobre resultados da força de trabalho em saúde (coluna azul). Cada caixinha do modelo pode ser desdobrado em vários temas, que por sua vez, podem se mensurados por meio de diferentes indicadores.
+
+É possível verificar o modelo interativo por meio de uma ferramenta online clicando [aqui](https://hrhvisualizer.org/).
+
+![Sonderegger et al. (2021) - tradução livre](figuras/captura%20-%20modelo%20sonderegger.png){fig-align="center"}
+
+Conforme se observa, temos processos relacionados a cinco elementos e o elemento disponibilidade. A tabela abaixo relaciona cada elemento e uma breve descrição.
+
+| Elemento                       | Descrição |
+|--------------------------------|-----------|
+| Ensino                         |           |
+| Entrada no mercado de trabalho |           |
+| Manutenção e desempenho        |           |
+| Ambiente favorável             |           |
+| Saída                          |           |
+| Disponibilidade                |           |
+
+: Sonderegger et al. (2021)
