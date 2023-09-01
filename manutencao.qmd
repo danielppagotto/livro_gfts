@@ -1,0 +1,197 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+# Indicadores de manutenção e desempenho
+
+Aqui estão indicadores relacionados a incentivos financeiros e não financeiros, oportunidades de educação continuada, possibilidade de crescimento profissional, gestão do desempenho (Sonderegger et al., 2016).
+
+Vamos tratar dos seguintes indicadores:
+
+-   [Proporção de vínculos precarizados]
+
+-   [Remuneração média]
+
+## Proporção de vínculos precarizados
+
+### Justificativa
+
+Vínculos classificados como precários - terceirizações, "pejotização", dentre outros - reduz a segurança do trabalhador. Uma alta proporção de vínculos precários pode acarretar baixa fixação de profissionais em determinadas localidades (Massuda et al., 2021).
+
+### Ficha do indicador
+
++----------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Nome do Indicador                                                    | Proporção de vínculos precarizados                                                                                                                                                                                                                             |
++======================================================================+================================================================================================================================================================================================================================================================+
+| Domínio                                                              | Manutenção e Desempenho                                                                                                                                                                                                                                        |
++----------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Conceitos e definições                                               | Proporção de vínculos classificados como precarizados, conforme Vieira et al. (2019), em determinado espaço geográfico e mês/ano.                                                                                                                              |
++----------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Método de cálculo                                                    | Numerador: número de vínculos precarizados segundo classificação de Vieira et al. (2019) no espaço geográfico e mês/ano. Denominador: todos os vínculos, independente do tipo                                                                                  |
++----------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Unidade de medida                                                    | Proporção de vínculos                                                                                                                                                                                                                                          |
++----------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Variáveis que compõem o indicador, fonte e instituições que a produz | Variável: VINCULAC - tipo de vínculo do profissional                                                                                                                                                                                                           |
+|                                                                      |                                                                                                                                                                                                                                                                |
+|                                                                      | Fonte: Cadastro Nacional de Estabelecimentos de Saúde - CNES-PF                                                                                                                                                                                                |
+|                                                                      |                                                                                                                                                                                                                                                                |
+|                                                                      | Instituição: Datasus - Ministério da Saúde                                                                                                                                                                                                                     |
++----------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Abrangência geográfica                                               | Brasil, Região, Unidade da Federação, Macrorregiões de Saúde, Regiões de Saúde, Municípios                                                                                                                                                                     |
++----------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Níveis de desagregação indicador                                     | Tipo de estabelecimento (ex.: atenção primária), SUS e não SUS, estabelecimento de saúde, categoria profissional                                                                                                                                               |
++----------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Periodicidade de atualização do indicador                            | Mensal                                                                                                                                                                                                                                                         |
++----------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Série histórica utilizada                                            | Competência de janeiro de cada ano                                                                                                                                                                                                                             |
++----------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Referências                                                          | Vieira, L. A., Caldas, L. C., Gama, M. R. D. J., Almeida, U. R., Lemos, E. C. D., & Carvalho, F. F. B. D. (2023). A Educação Física como força de trabalho do SUS: análise dos tipos de vínculos profissionais. *Trabalho, Educação e Saúde*, *21*, e01991210. |
++----------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Polaridade                                                           | Quanto menor, melhor                                                                                                                                                                                                                                           |
++----------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+### Calculando o indicador usando R
+
+Carregando os pacotes necessários
+
+```{r}
+#| warning: FALSE
+
+library(microdatasus)
+library(tidyverse)
+library(DT)
+library(readxl)
+library(mapview)
+library(geobr)
+```
+
+-   Vamos **baixar os microdados** com o apoio do pacote microdatasus. Vamos fazer um estudo para o estado de Roraima.
+
+```{r}
+#| echo: FALSE
+#| output: FALSE
+
+library(readr)
+
+cnes_pf_manutencao <- read_csv("bases_apoio/cnes_pf_manutencao.csv")
+
+```
+
+```{r}
+#| warning: FALSE
+#| eval: FALSE
+
+cnes_pf_rr <- fetch_datasus(year_start = 2023, month_start = 1,
+                            year_end = 2023, month_end = 1, 
+                            uf = "RR", information_system = "CNES-PF")  
+
+```
+
+-   Vamos filtrar **apenas os registros** para enfermagem por meio da função `filter`.
+
+-   E usando a função `select` vamos manter apenas as variáveis de interesse (`CODUFMUN` - identifica o município; `VINCULAC` - variável no formato de código que identifica o vínculo).
+
+```{r}
+
+cnes_tratado <- 
+  cnes_pf_manutencao |> 
+    filter(str_detect(CBO, "2235")) |> 
+    select(CODUFMUN, CBO, VINCULAC) 
+
+```
+
+-   A variável `VINCULAC` possui múltiplas categorias, conforme se visualiza abaixo. A última coluna (`classificacao`) foi nós mesmos que criamos com base na classificação de Viana et al. (2019).
+
+```{r}
+#| warning: false
+
+vinculac <- read_delim("bases_apoio/vinculac.csv", 
+    delim = ";", escape_double = FALSE, trim_ws = TRUE)
+
+
+vinculac |> 
+  datatable()
+```
+
+<br/>
+
+-   Temos os dados dos vínculos conforme o CNES-PF e temos os dados que identificam a classificação de vínculo no objeto `VINCULAC`. Temos que juntar e depois agregar por município.
+
+-   Para isso, vamos aplicar a função `left_join` para juntar as tabelas
+
+```{r}
+# transformando a variável para tipo numérico para conseguir juntar
+cnes_tratado$VINCULAC <- as.numeric(cnes_tratado$VINCULAC)
+
+# Juntar conforme as duas colunas equivalentes - VINCULAC e CHAVE
+
+cnes_join <- 
+  cnes_tratado |> 
+  left_join(vinculac, by = c("VINCULAC"="CHAVE"))
+
+cnes_join |> 
+  head()
+```
+
+-   Vamos calcular o indicador por município.
+
+-   Como a base do CNES não tem a identificação do município, vamos precisar juntar com alguma base para identificá-los.
+
+```{r}
+
+cnes_join <- 
+  cnes_join |> 
+  count(CODUFMUN, classificacao) %>%
+  group_by(CODUFMUN) %>%
+  mutate(freq = n / sum(n)) |> 
+  mutate(freq = round(freq, 2))
+
+hierarquia_municipios <- read_excel("bases_apoio/hierarquia_municipios.xlsx")
+
+  
+precarizacao <- 
+  cnes_join |> 
+    left_join(hierarquia_municipios, by = c("CODUFMUN"="cod_municipio")) |> 
+    select(CODUFMUN, cod_municipiodv, municipio, uf_sigla, classificacao, freq ) 
+
+precarizacao |> 
+  datatable()
+```
+
+### Criando uma visualização
+
+Vamos **criar um mapa** para **visualizar o resultado**. O indicador que nos interessa está representado pela variável `freq` e a classificação precária. Portanto, vamos separar fazer um breve tratamento.
+
+```{r}
+
+precarizacao <- 
+  precarizacao |> 
+  filter(classificacao == "Precarizado") 
+```
+
+Baixando dados para fazer o mapa
+
+```{r}
+#| warning: FALSE
+#| output: FALSE
+
+rr <- read_municipality(code_muni = "RR", year = 2020)
+
+rr$code_muni <- as.character(rr$code_muni)
+
+shapefile_combinado <- merge(x = rr, 
+                             y = precarizacao, 
+                             by.x = "code_muni",  
+                             by.y = "cod_municipiodv")
+
+```
+
+```{r}
+
+shapefile_combinado |> 
+  mapview(zcol = "freq")
+```
+
+## Remuneração média

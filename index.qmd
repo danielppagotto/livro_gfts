@@ -1,9 +1,15 @@
 # Prefácio {.unnumbered}
 
-Este livro tem...
+[![Imagem de Denis Ngai - disponível em pexels](figuras/pexels-denis-ngai-4483669.jpg)](https://www.pexels.com/pt-br/foto/abandonado-perdido-africa-curtido-4483669/)
 
-```{r}
+<br/>
 
-1 + 1
+Em 2016, motivados por alertas de déficits de profissionais de saúde no futuro, a Organização Mundial da Saúde (OMS) lançou uma estratégia chamada Global Strategy for Human Resources for Health: Workforce 2030. A iniciativa se desdobrava em quatro objetivos, sendo o quarto o fortalecimento de estruturas para consolidação de dados sobre a força de trabalho em saúde e o seu monitoramento a nível regional, nacional e global (WHO, 2016).
 
-```
+A consolidação de um sistema de indicadores sobre a força de trabalho em saúde é um requisito para o amadurecimento de modelos de planejamento da força de trabalho (Najafpour et al., 2022; Rees et al., 2023).
+
+O **objetivo** deste material é descrever o cálculo de indicadores sobre gestão da força de trabalho em saúde no Brasil, usando o apoio da linguagem R.
+
+## Estrutura do documento
+
+A próxima seção contém aspectos introdutórios e, em sequência, o modelo teórico metodológico que empregaremos. Nos capítulos seguintes vamos apresentar as dimensões de processos da força de trabalho em saúde, com uma ficha dos indicadores, assim como o seu cálculo usando um script R e algumas análises breves.

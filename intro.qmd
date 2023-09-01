@@ -1,10 +1,10 @@
 # Aspectos introdutórios
 
-A seguir listamos algumas recomendações e compreensões importantes antes de qualquer avanço. 
+A seguir listamos algumas recomendações e compreensões importantes antes de qualquer avanço.
 
-* Todos os indicadores listados neste livro foram construídos com apoio de linguagem R. Não é objetivo deste livro servir como um material introdutório sobre R, estatística ou ciência de dados. 
+-   Todos os **indicadores** listados neste livro **foram construídos com apoio de linguagem R**. **Não é objetivo deste livro servir como um material introdutório sobre R, estatística ou ciência de dados**. Espera-se que o leitor tenha algum domínio da ferramenta.
 
-* Para rodar os exemplos, é importante ter algumas bibliotecas instaladas, como o metapacote `tidyverse`, `DT`, `genderBR`, `microdatasus`, `PNADcIBGE`, `ipeadata`, `remotes`, `readxl`.  Para instalar um pacote basta rodar a função abaixo. Apenas o pacote `microdatasus` vai exigir uma lógica diferente, conforme ilustrado. 
+-   Para rodar os exemplos, **é importante ter algumas bibliotecas instaladas**, como o metapacote `tidyverse`, `DT`, `genderBR`, `microdatasus`, `PNADcIBGE`, `ipeadata`, `remotes`, `readxl`. Para instalar um pacote basta rodar a função abaixo. Apenas o pacote `microdatasus` vai exigir uma lógica diferente, conforme ilustrado.
 
 ```{r}
 #| eval: FALSE
@@ -15,19 +15,21 @@ remotes::install_github("rfsaldanha/microdatasus")
 
 ```
 
-* Algumas variáveis possuem formato de código (ex.: Código Brasileiro de Ocupações - CBO, código IBGE de municípios), conforme veremos a seguir.  
+-   Algumas variáveis possuem formato de código (ex.: Código Brasileiro de Ocupações - CBO, código IBGE de municípios), conforme veremos a seguir.
 
 ## Variáveis em formato de códigos
 
-Conforme informado anteriormente, algumas variáveis possuem formato de códigos. Aqui vamos falar um pouquinho sobre o código IBGE e o código CBO. 
+Conforme informado anteriormente, algumas variáveis possuem formato de códigos. Aqui vamos falar um pouquinho sobre o código IBGE e o código CBO.
 
-### Código IBGE 
+### Código IBGE
 
-O **código IBGE** é uma variável que aparece em muitas bases governamentais. Ele é, geralmente, um código composto por seis dígitos que identifica um município. Fazendo um paralelo conosco, **é como se fosse um CPF do município**. 
+O **código IBGE** é uma variável que aparece em muitas bases governamentais. Ele é, geralmente, um código composto por seis dígitos que identifica um município. Fazendo um paralelo conosco, **é como se fosse um CPF do município**.
 
-Os dois primeiros dígitos geralmente são uma forma de identificação do estado. Assim, todos os municípios do Paraná, por exemplo, começam com o dígito 41. 
+Os **dois primeiros dígitos** geralmente são uma forma de **identificação do estado**. Assim, todos os municípios do Paraná, por exemplo, começam com o dígito 41.
 
-**Atenção:** Houve um tempo que se usava um sétimo dígito, chamado dígito verificador. Porém, foi caindo em desuso. Se eventualmente você encontrar este dígito verificar, sugerimos aplicar a função de `substr`. Vamos ver como fazer isso? 
+Essa é uma **variável** extremamente importante, pois permite você juntar duas bases (contanto que ambas tenham o código). Posso juntar uma base com população dos municípios com o número de profissionais atuantes, por exemplo.
+
+**Atenção:** Houve um tempo que se usava um sétimo dígito, chamado dígito verificador. Porém, foi caindo em desuso. Se eventualmente você encontrá-lo, sugerimos aplicar a função de `substr`. Vamos ver como fazer isso?
 
 ```{r}
 #| warning: FALSE 
@@ -44,9 +46,9 @@ hierarquia_municipios |>
 
 ```
 
-Veja que neste exercício temos os seis municípios da base. Todos são de Rondônia e, portanto, começam com 11. 
+Veja que neste exercício temos os seis municípios da base. Todos são de Rondônia e, portanto, começam com 11.
 
-Vamos criar uma nova coluna chamada ibge, sem o sétimo dígito. Para isso, teremos que transformar a variável em `char` (categórica), pois está como numérica (`double`). 
+Vamos criar uma nova coluna chamada ibge, sem o sétimo dígito. Para isso, teremos que transformar a variável em `char` (categórica), pois está como numérica (`double`).
 
 ```{r}
 
@@ -64,13 +66,13 @@ hierarquia_municipios |>
 
 ```
 
-### CBO 
+### CBO
 
-O código CBO - [Classificação Brasileira de Ocupações](https://cbo.mte.gov.br/cbosite/pages/home.jsf) - foi estabelecido portaria do Ministério do Trabalho e Emprego nº. 397, de 9 de outubro de 2002. 
+O código CBO - [Classificação Brasileira de Ocupações](https://cbo.mte.gov.br/cbosite/pages/home.jsf) - foi estabelecido portaria do Ministério do Trabalho e Emprego nº. 397, de 9 de outubro de 2002.
 
-O código é composto por seis dígitos. Os quatro primeiros dígintos representam uma família de CBO e os demais descrevem a profissão detalhadamente. Por exemplo: Todo cirurgião dentista é identificado tem seu código iniciado 2232. Mas o cirurgião dentista - endodontista é 2232-12,o odontopediatra é 2232-36. 
+O código é composto por seis dígitos. Os quatro primeiros dígintos representam uma família de CBO e os demais descrevem a profissão detalhadamente. Por exemplo: Todo cirurgião dentista é identificado tem seu código iniciado 2232. Mas o cirurgião dentista - endodontista é 2232-12,o odontopediatra é 2232-36.
 
-Abaixo você consegue verificar lista completa de profissões e os respectivos códigos. 
+Abaixo você consegue verificar lista completa de profissões e os respectivos códigos.
 
 ```{r}
 #| warning: FALSE 
@@ -84,7 +86,7 @@ datatable(cbo_completo)
 
 ```
 
-Abaixo você consegue verificar lista de famílias de profissões e os respectivos códigos. 
+Abaixo você consegue verificar lista de famílias de profissões e os respectivos códigos.
 
 ```{r}
 #| warning: FALSE 
@@ -98,5 +100,3 @@ cbo_familia <- read_delim("bases_apoio/CBO2002 - Familia.csv",
 datatable(cbo_familia)
 
 ```
-
-

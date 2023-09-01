@@ -2,14 +2,20 @@ project:
   type: book
 
 book:
-  title: "Indicadores para Gestão da Força de Trabalho em Saúde"
-  author: "Daniel Pagotto"
-  date: "28/08/2023"
+  title: "Indicadores para Governança e Gestão da Força de Trabalho em Saúde"
+  author: "-"
+  date: "-"
   chapters:
     - index.qmd
     - intro.qmd
     - summary.qmd
+    - ensino.qmd
+    - entrada.qmd
+    - manutencao.qmd
+    - ambiente.qmd
+    - saida.qmd
     - references.qmd
+    
 
 bibliography: references.bib
 

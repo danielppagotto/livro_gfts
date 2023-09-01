@@ -10,15 +10,13 @@ Vamos focar especificamente nos processos da força de trabalho em saúde (colun
 
 ![Sonderegger et al. (2021) - tradução livre](figuras/captura%20-%20modelo%20sonderegger.png){fig-align="center"}
 
-Conforme se observa, temos processos relacionados a cinco elementos e o elemento disponibilidade. A tabela abaixo relaciona cada elemento e uma breve descrição.
+Conforme se observa, temos processos relacionados a cinco elementos e o elemento disponibilidade. A tabela abaixo relaciona cada elemento e uma breve descrição, conforme Sonderegger et al. (2021).
 
-| Elemento                       | Descrição |
-|--------------------------------|-----------|
-| Ensino                         |           |
-| Entrada no mercado de trabalho |           |
-| Manutenção e desempenho        |           |
-| Ambiente favorável             |           |
-| Saída                          |           |
-| Disponibilidade                |           |
-
-: Sonderegger et al. (2021)
+| Elemento                       | Descrição                                                                                                                                                                                           |
+|--------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Ensino                         | Oferta de vagas de cursos superior, políticas de recrutamento para ensino, qualidade do ensino, currículo, distribuição da oferta da força de trabalho em saúde                                     |
+| Entrada no mercado de trabalho | Quantidade de profissionais estrangeiros, quantidade de profissionais atuantes em detrimento do pessoal habilitado para exercer a função, distribuição entre sistema público e privado              |
+| Manutenção e desempenho        | Incentivos financeiros e não financeiros, oportunidades de educação continuada, possibilidade de crescimento profissional, gestão do desempenho                                                     |
+| Ambiente favorável             | Ambiente de trabalho (ex.: infraestrutura, disponibilidade de recursos e equipamentos), ambiente onde o trabalhador vive (ex.: infraestrutura de rodovias, violência e qualidade da educação local) |
+| Saída                          | Aposentadoria, migração e fixação                                                                                                                                                                   |
+| Disponibilidade                | Disponibilidade da força de acordo com áreas geográficas; distribuição equitativa entre área rural e urbana; mix de habilidades entre categorias profissionais                                      |
