@@ -234,18 +234,38 @@ shapefile_combinado |>
 
 ### Calculando o indicador usando R
 
-Vamos carregar os pacotes necessários para a análise e carregar
+Vamos carregar os pacotes necessários para a análise.
 
 ```{r}
+#| warning: FALSE
+
 library(readr)
 library(dplyr)
 library(genderBR)
+```
+
+Após isso, vamos baixar os dados e utilizar a função "*distinct*" para retirar as linhas repetidas.
+
+```{r}
+#| warning: FALSE
 
 ind_prof_goias <- read_csv("bases_apoio/ind_prof_goias.csv") %>% 
                   distinct()
+```
+
+Usaremos a função "*get_gender*" para diferenciar o sexo dos trabalhadores com base no primeiro nome deles, criando, então, a variável "sexo".
+
+```{r}
+#| warning: FALSE
 
 ind_prof_goias <- ind_prof_goias %>% 
   mutate(sexo = get_gender(NOMEPROF))
+```
+
+Em seguida, vamos retirar os resultados de sexo não identificados. Iremos fazer a contagem de resultados e depois aplicaremos a porcentagem deles. Por fim, aplicamos o filtro selecionando apenas o sexo feminino.
+
+```{r}
+#| warning: FALSE
 
 ind_prof_goias <- ind_prof_goias %>%
                     filter(sexo != 'NA') %>% 
@@ -256,3 +276,28 @@ ind_prof_goias <- ind_prof_goias %>%
 ```
 
 ### Criando uma visualização
+
+```{r}
+maps_GO <- 
+ind_prof_goias
+```
+
+```{r}
+#| warning: FALSE
+#| output: FALSE
+
+GO <- read_municipality(code_muni = "GO", year = 2020)
+
+GO$code_muni <- as.character(GO$code_muni)
+
+shapefile_combinado <- merge(x = rr, 
+                             y = precarizacao, 
+                             by.x = "code_muni",  
+                             by.y = "cod_municipiodv")
+```
+
+```{r}
+
+shapefile_combinado |> 
+  mapview(zcol = "freq")
+```
