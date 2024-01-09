@@ -44,14 +44,14 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Indicadores para Gestão da Força de Trabalho em Saúde",
+    "title": "Indicadores para Governança e Gestão da Força de Trabalho em Saúde",
     "section": "",
     "text": "Prefácio\nEm 2016, motivados por alertas de déficits de profissionais de saúde no futuro, a Organização Mundial da Saúde (OMS) lançou uma estratégia chamada Global Strategy for Human Resources for Health: Workforce 2030. A iniciativa se desdobrava em quatro objetivos, sendo o quarto o fortalecimento de estruturas para consolidação de dados sobre a força de trabalho em saúde e o seu monitoramento a nível regional, nacional e global (WHO, 2016).\nA consolidação de um sistema de indicadores sobre a força de trabalho em saúde é um requisito para o amadurecimento de modelos de planejamento da força de trabalho (Najafpour et al., 2022; Rees et al., 2023).\nO objetivo deste material é descrever o cálculo de indicadores sobre gestão da força de trabalho em saúde no Brasil, usando o apoio da linguagem R."
   },
   {
     "objectID": "index.html#estrutura-do-documento",
     "href": "index.html#estrutura-do-documento",
-    "title": "Indicadores para Gestão da Força de Trabalho em Saúde",
+    "title": "Indicadores para Governança e Gestão da Força de Trabalho em Saúde",
     "section": "Estrutura do documento",
     "text": "Estrutura do documento\nA próxima seção contém aspectos introdutórios e, em sequência, o modelo teórico metodológico que empregaremos. Nos capítulos seguintes vamos apresentar as dimensões de processos da força de trabalho em saúde, com uma ficha dos indicadores, assim como o seu cálculo usando um script R e algumas análises breves."
   }
