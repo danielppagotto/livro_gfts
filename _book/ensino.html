@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Indicadores para Gestão da Força de Trabalho em Saúde - 3&nbsp; Indicadores de Ensino</title>
+<title>Indicadores para Governança e Gestão da Força de Trabalho em Saúde - 3&nbsp; Indicadores de Ensino</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,7 +57,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -76,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
       <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ensino.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Indicadores de Ensino</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -88,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Indicadores para Gestão da Força de Trabalho em Saúde</a> 
+      <a href="./">Indicadores para Governança e Gestão da Força de Trabalho em Saúde</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -158,7 +159,75 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#quantidade-de-cursos" id="toc-quantidade-de-cursos" class="nav-link active" data-scroll-target="#quantidade-de-cursos"><span class="header-section-number">3.1</span> Quantidade de cursos</a>
+  <ul class="collapse">
+  <li><a href="#justificativa" id="toc-justificativa" class="nav-link" data-scroll-target="#justificativa"><span class="header-section-number">3.1.1</span> Justificativa</a></li>
+  <li><a href="#ficha-do-indicador" id="toc-ficha-do-indicador" class="nav-link" data-scroll-target="#ficha-do-indicador"><span class="header-section-number">3.1.2</span> Ficha do indicador</a></li>
+  <li><a href="#calculando-o-indicador-usando-r" id="toc-calculando-o-indicador-usando-r" class="nav-link" data-scroll-target="#calculando-o-indicador-usando-r"><span class="header-section-number">3.1.3</span> Calculando o indicador usando R</a></li>
+  <li><a href="#criando-uma-visualização" id="toc-criando-uma-visualização" class="nav-link" data-scroll-target="#criando-uma-visualização"><span class="header-section-number">3.1.4</span> Criando uma visualização</a></li>
+  </ul></li>
+  <li><a href="#cursos-ead" id="toc-cursos-ead" class="nav-link" data-scroll-target="#cursos-ead"><span class="header-section-number">3.2</span> Cursos EAD</a>
+  <ul class="collapse">
+  <li><a href="#justificativa-1" id="toc-justificativa-1" class="nav-link" data-scroll-target="#justificativa-1"><span class="header-section-number">3.2.1</span> Justificativa</a></li>
+  <li><a href="#ficha-do-indicador-1" id="toc-ficha-do-indicador-1" class="nav-link" data-scroll-target="#ficha-do-indicador-1"><span class="header-section-number">3.2.2</span> Ficha do indicador</a></li>
+  <li><a href="#calculando-o-indicador-usando-r-1" id="toc-calculando-o-indicador-usando-r-1" class="nav-link" data-scroll-target="#calculando-o-indicador-usando-r-1"><span class="header-section-number">3.2.3</span> Calculando o indicador usando R</a></li>
+  <li><a href="#criando-uma-visualização-1" id="toc-criando-uma-visualização-1" class="nav-link" data-scroll-target="#criando-uma-visualização-1"><span class="header-section-number">3.2.4</span> Criando uma visualização</a></li>
+  </ul></li>
+  <li><a href="#quantidade-de-vagas" id="toc-quantidade-de-vagas" class="nav-link" data-scroll-target="#quantidade-de-vagas"><span class="header-section-number">3.3</span> Quantidade de vagas</a>
+  <ul class="collapse">
+  <li><a href="#justificativa-2" id="toc-justificativa-2" class="nav-link" data-scroll-target="#justificativa-2"><span class="header-section-number">3.3.1</span> Justificativa</a></li>
+  <li><a href="#ficha-do-indicador-2" id="toc-ficha-do-indicador-2" class="nav-link" data-scroll-target="#ficha-do-indicador-2"><span class="header-section-number">3.3.2</span> Ficha do indicador</a></li>
+  <li><a href="#calculando-o-indicador-usando-r-2" id="toc-calculando-o-indicador-usando-r-2" class="nav-link" data-scroll-target="#calculando-o-indicador-usando-r-2"><span class="header-section-number">3.3.3</span> Calculando o indicador usando R</a></li>
+  <li><a href="#criando-uma-visualização-2" id="toc-criando-uma-visualização-2" class="nav-link" data-scroll-target="#criando-uma-visualização-2"><span class="header-section-number">3.3.4</span> Criando uma visualização</a></li>
+  </ul></li>
+  <li><a href="#alunos-inscritos" id="toc-alunos-inscritos" class="nav-link" data-scroll-target="#alunos-inscritos"><span class="header-section-number">3.4</span> Alunos inscritos</a>
+  <ul class="collapse">
+  <li><a href="#justificativa-3" id="toc-justificativa-3" class="nav-link" data-scroll-target="#justificativa-3"><span class="header-section-number">3.4.1</span> Justificativa</a></li>
+  <li><a href="#ficha-do-indicador-3" id="toc-ficha-do-indicador-3" class="nav-link" data-scroll-target="#ficha-do-indicador-3"><span class="header-section-number">3.4.2</span> Ficha do indicador</a></li>
+  <li><a href="#calculando-o-indicador-usando-r-3" id="toc-calculando-o-indicador-usando-r-3" class="nav-link" data-scroll-target="#calculando-o-indicador-usando-r-3"><span class="header-section-number">3.4.3</span> Calculando o indicador usando R</a></li>
+  <li><a href="#criando-uma-visualização-3" id="toc-criando-uma-visualização-3" class="nav-link" data-scroll-target="#criando-uma-visualização-3"><span class="header-section-number">3.4.4</span> Criando uma visualização</a></li>
+  </ul></li>
+  <li><a href="#alunos-ingressantes" id="toc-alunos-ingressantes" class="nav-link" data-scroll-target="#alunos-ingressantes"><span class="header-section-number">3.5</span> Alunos ingressantes</a>
+  <ul class="collapse">
+  <li><a href="#justificativa-4" id="toc-justificativa-4" class="nav-link" data-scroll-target="#justificativa-4"><span class="header-section-number">3.5.1</span> Justificativa</a></li>
+  <li><a href="#ficha-do-indicador-4" id="toc-ficha-do-indicador-4" class="nav-link" data-scroll-target="#ficha-do-indicador-4"><span class="header-section-number">3.5.2</span> Ficha do indicador</a></li>
+  <li><a href="#calculando-o-indicador-usando-r-4" id="toc-calculando-o-indicador-usando-r-4" class="nav-link" data-scroll-target="#calculando-o-indicador-usando-r-4"><span class="header-section-number">3.5.3</span> Calculando o indicador usando R</a></li>
+  <li><a href="#criando-uma-visualização-4" id="toc-criando-uma-visualização-4" class="nav-link" data-scroll-target="#criando-uma-visualização-4"><span class="header-section-number">3.5.4</span> Criando uma visualização</a></li>
+  </ul></li>
+  <li><a href="#alunos-concluintes" id="toc-alunos-concluintes" class="nav-link" data-scroll-target="#alunos-concluintes"><span class="header-section-number">3.6</span> Alunos concluintes</a>
+  <ul class="collapse">
+  <li><a href="#justificativa-5" id="toc-justificativa-5" class="nav-link" data-scroll-target="#justificativa-5"><span class="header-section-number">3.6.1</span> Justificativa</a></li>
+  <li><a href="#ficha-do-indicador-5" id="toc-ficha-do-indicador-5" class="nav-link" data-scroll-target="#ficha-do-indicador-5"><span class="header-section-number">3.6.2</span> Ficha do indicador</a></li>
+  <li><a href="#calculando-o-indicador-usando-r-5" id="toc-calculando-o-indicador-usando-r-5" class="nav-link" data-scroll-target="#calculando-o-indicador-usando-r-5"><span class="header-section-number">3.6.3</span> Calculando o indicador usando R</a></li>
+  <li><a href="#criando-uma-visualização-5" id="toc-criando-uma-visualização-5" class="nav-link" data-scroll-target="#criando-uma-visualização-5"><span class="header-section-number">3.6.4</span> Criando uma visualização</a></li>
+  </ul></li>
+  <li><a href="#inscrições-por-vaga" id="toc-inscrições-por-vaga" class="nav-link" data-scroll-target="#inscrições-por-vaga"><span class="header-section-number">3.7</span> Inscrições por vaga</a>
+  <ul class="collapse">
+  <li><a href="#justificativa-6" id="toc-justificativa-6" class="nav-link" data-scroll-target="#justificativa-6"><span class="header-section-number">3.7.1</span> Justificativa</a></li>
+  <li><a href="#ficha-do-indicador-6" id="toc-ficha-do-indicador-6" class="nav-link" data-scroll-target="#ficha-do-indicador-6"><span class="header-section-number">3.7.2</span> Ficha do indicador</a></li>
+  <li><a href="#calculando-o-indicador-usando-r-6" id="toc-calculando-o-indicador-usando-r-6" class="nav-link" data-scroll-target="#calculando-o-indicador-usando-r-6"><span class="header-section-number">3.7.3</span> Calculando o indicador usando R</a></li>
+  <li><a href="#criando-uma-visualização-6" id="toc-criando-uma-visualização-6" class="nav-link" data-scroll-target="#criando-uma-visualização-6"><span class="header-section-number">3.7.4</span> Criando uma visualização</a></li>
+  </ul></li>
+  <li><a href="#taxa-de-graduados" id="toc-taxa-de-graduados" class="nav-link" data-scroll-target="#taxa-de-graduados"><span class="header-section-number">3.8</span> Taxa de graduados</a>
+  <ul class="collapse">
+  <li><a href="#justificativa-7" id="toc-justificativa-7" class="nav-link" data-scroll-target="#justificativa-7"><span class="header-section-number">3.8.1</span> Justificativa</a></li>
+  <li><a href="#ficha-do-indicador-7" id="toc-ficha-do-indicador-7" class="nav-link" data-scroll-target="#ficha-do-indicador-7"><span class="header-section-number">3.8.2</span> Ficha do indicador</a></li>
+  <li><a href="#calculando-o-indicador-usando-r-7" id="toc-calculando-o-indicador-usando-r-7" class="nav-link" data-scroll-target="#calculando-o-indicador-usando-r-7"><span class="header-section-number">3.8.3</span> Calculando o indicador usando R</a></li>
+  <li><a href="#criando-uma-visualização-7" id="toc-criando-uma-visualização-7" class="nav-link" data-scroll-target="#criando-uma-visualização-7"><span class="header-section-number">3.8.4</span> Criando uma visualização</a></li>
+  </ul></li>
+  <li><a href="#qualidade-de-cursos" id="toc-qualidade-de-cursos" class="nav-link" data-scroll-target="#qualidade-de-cursos"><span class="header-section-number">3.9</span> Qualidade de cursos</a>
+  <ul class="collapse">
+  <li><a href="#justificativa-8" id="toc-justificativa-8" class="nav-link" data-scroll-target="#justificativa-8"><span class="header-section-number">3.9.1</span> Justificativa</a></li>
+  <li><a href="#ficha-do-indicador-8" id="toc-ficha-do-indicador-8" class="nav-link" data-scroll-target="#ficha-do-indicador-8"><span class="header-section-number">3.9.2</span> Ficha do indicador</a></li>
+  <li><a href="#calculando-o-indicador-usando-r-8" id="toc-calculando-o-indicador-usando-r-8" class="nav-link" data-scroll-target="#calculando-o-indicador-usando-r-8"><span class="header-section-number">3.9.3</span> Calculando o indicador usando R</a></li>
+  <li><a href="#criando-uma-visualização-8" id="toc-criando-uma-visualização-8" class="nav-link" data-scroll-target="#criando-uma-visualização-8"><span class="header-section-number">3.9.4</span> Criando uma visualização</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -181,8 +250,686 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>Aqui estão apresentadas as variáveis relacionadas ao ensino.</p>
+<section id="quantidade-de-cursos" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="quantidade-de-cursos"><span class="header-section-number">3.1</span> Quantidade de cursos</h2>
+<section id="justificativa" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="justificativa"><span class="header-section-number">3.1.1</span> Justificativa</h3>
+</section>
+<section id="ficha-do-indicador" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="ficha-do-indicador"><span class="header-section-number">3.1.2</span> Ficha do indicador</h3>
+<table class="table">
+<colgroup>
+<col style="width: 39%">
+<col style="width: 60%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nome do Indicador</th>
+<th>Quantidade de cursos de saúde</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Domínio</td>
+<td>Ensino</td>
+</tr>
+<tr class="even">
+<td>Conceitos e definições</td>
+<td>Quantidade de cursos para ensino e treinamento em saúde</td>
+</tr>
+<tr class="odd">
+<td>Método de cálculo</td>
+<td>Somatório da quantidade de cursos de saúde de dada unidade territorial</td>
+</tr>
+<tr class="even">
+<td>Unidade de medida</td>
+<td>Cursos</td>
+</tr>
+<tr class="odd">
+<td>Variáveis que compõem o indicador, fonte e instituições que a produz</td>
+<td><p>Variável:</p>
+<p>Fonte: Censo da Educação Superior (INEP)</p>
+<p>Instituição:</p></td>
+</tr>
+<tr class="even">
+<td>Abrangência geográfica</td>
+<td>Município, UF, região, país</td>
+</tr>
+<tr class="odd">
+<td>Níveis de desagregação indicador</td>
+<td>Curso superior, rede de ensino (público privado), grau acadêmico (bachalerado, tecnológico, licenciatura)</td>
+</tr>
+<tr class="even">
+<td>Periodicidade de atualização do indicador</td>
+<td>Anual</td>
+</tr>
+<tr class="odd">
+<td>Série histórica utilizada</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Referências</td>
+<td>Ministério da Saúde (2007)</td>
+</tr>
+<tr class="odd">
+<td>Polaridade</td>
+<td>Quanto maior, maior quantidade de cursos na localidade</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="calculando-o-indicador-usando-r" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="calculando-o-indicador-usando-r"><span class="header-section-number">3.1.3</span> Calculando o indicador usando R</h3>
+</section>
+<section id="criando-uma-visualização" class="level3" data-number="3.1.4">
+<h3 data-number="3.1.4" class="anchored" data-anchor-id="criando-uma-visualização"><span class="header-section-number">3.1.4</span> Criando uma visualização</h3>
+</section>
+</section>
+<section id="cursos-ead" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="cursos-ead"><span class="header-section-number">3.2</span> Cursos EAD</h2>
+<section id="justificativa-1" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="justificativa-1"><span class="header-section-number">3.2.1</span> Justificativa</h3>
+</section>
+<section id="ficha-do-indicador-1" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="ficha-do-indicador-1"><span class="header-section-number">3.2.2</span> Ficha do indicador</h3>
+<table class="table">
+<colgroup>
+<col style="width: 39%">
+<col style="width: 60%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nome do Indicador</th>
+<th>Percentual de cursos EaD em saúde</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Domínio</td>
+<td>Ensino</td>
+</tr>
+<tr class="even">
+<td>Conceitos e definições</td>
+<td>Percentual de cursos no formato EaD na área de saúde</td>
+</tr>
+<tr class="odd">
+<td>Método de cálculo</td>
+<td><p>Numerador: Total de cursos da modalidade EaD</p>
+<p>Denominador: total de cursos independente de modalidade</p></td>
+</tr>
+<tr class="even">
+<td>Unidade de medida</td>
+<td>Porcentagem</td>
+</tr>
+<tr class="odd">
+<td>Variáveis que compõem o indicador, fonte e instituições que a produz</td>
+<td><p>Variável:</p>
+<p>Fonte: Censo da Educação Superior (INEP)</p>
+<p>Instituição:</p></td>
+</tr>
+<tr class="even">
+<td>Abrangência geográfica</td>
+<td>Município, UF, região, país</td>
+</tr>
+<tr class="odd">
+<td>Níveis de desagregação indicador</td>
+<td>Curso superior, rede de ensino (público privado), grau acadêmico (bachalerado, tecnológico, licenciatura)</td>
+</tr>
+<tr class="even">
+<td>Periodicidade de atualização do indicador</td>
+<td>Anual</td>
+</tr>
+<tr class="odd">
+<td>Série histórica utilizada</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Referências</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Polaridade</td>
+<td>Quanto maior, maior participação de EaD formando profissionais de saúde</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="calculando-o-indicador-usando-r-1" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="calculando-o-indicador-usando-r-1"><span class="header-section-number">3.2.3</span> Calculando o indicador usando R</h3>
+</section>
+<section id="criando-uma-visualização-1" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="criando-uma-visualização-1"><span class="header-section-number">3.2.4</span> Criando uma visualização</h3>
+</section>
+</section>
+<section id="quantidade-de-vagas" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="quantidade-de-vagas"><span class="header-section-number">3.3</span> Quantidade de vagas</h2>
+<section id="justificativa-2" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="justificativa-2"><span class="header-section-number">3.3.1</span> Justificativa</h3>
+</section>
+<section id="ficha-do-indicador-2" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="ficha-do-indicador-2"><span class="header-section-number">3.3.2</span> Ficha do indicador</h3>
+<table class="table">
+<colgroup>
+<col style="width: 39%">
+<col style="width: 60%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nome do Indicador</th>
+<th>Quantidade de vagas oferecidas em cursos da saúde</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Domínio</td>
+<td>Ensino</td>
+</tr>
+<tr class="even">
+<td>Conceitos e definições</td>
+<td>Oferta de vagas em cursos superiores da saúde</td>
+</tr>
+<tr class="odd">
+<td>Método de cálculo</td>
+<td>Somatório da quantidade de vagas ofertadas em cursos de saúde de dada unidade territorial</td>
+</tr>
+<tr class="even">
+<td>Unidade de medida</td>
+<td>Vagas</td>
+</tr>
+<tr class="odd">
+<td>Variáveis que compõem o indicador, fonte e instituições que a produz</td>
+<td><p>Variável:</p>
+<p>Fonte: Censo da Educação Superior (INEP)</p>
+<p>Instituição:</p></td>
+</tr>
+<tr class="even">
+<td>Abrangência geográfica</td>
+<td>Município, UF, região, país</td>
+</tr>
+<tr class="odd">
+<td>Níveis de desagregação indicador</td>
+<td>Curso superior, rede de ensino (público privado), grau acadêmico (bachalerado, tecnológico, licenciatura)</td>
+</tr>
+<tr class="even">
+<td>Periodicidade de atualização do indicador</td>
+<td>Anual</td>
+</tr>
+<tr class="odd">
+<td>Série histórica utilizada</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Referências</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Polaridade</td>
+<td>Quanto maior, maior quantidade de vagas de dada localidade</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="calculando-o-indicador-usando-r-2" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="calculando-o-indicador-usando-r-2"><span class="header-section-number">3.3.3</span> Calculando o indicador usando R</h3>
+</section>
+<section id="criando-uma-visualização-2" class="level3" data-number="3.3.4">
+<h3 data-number="3.3.4" class="anchored" data-anchor-id="criando-uma-visualização-2"><span class="header-section-number">3.3.4</span> Criando uma visualização</h3>
+</section>
+</section>
+<section id="alunos-inscritos" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="alunos-inscritos"><span class="header-section-number">3.4</span> Alunos inscritos</h2>
+<section id="justificativa-3" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="justificativa-3"><span class="header-section-number">3.4.1</span> Justificativa</h3>
+</section>
+<section id="ficha-do-indicador-3" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="ficha-do-indicador-3"><span class="header-section-number">3.4.2</span> Ficha do indicador</h3>
+<table class="table">
+<colgroup>
+<col style="width: 39%">
+<col style="width: 60%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nome do Indicador</th>
+<th>Quantidade de alunos inscritos em cursos da saúde</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Domínio</td>
+<td>Ensino</td>
+</tr>
+<tr class="even">
+<td>Conceitos e definições</td>
+<td>Quantidade de alunos inscritos em cursos superiores da saúde</td>
+</tr>
+<tr class="odd">
+<td>Método de cálculo</td>
+<td>Somatório da quantidade de alunos inscritos em cursos de saúde de dada unidade territorial</td>
+</tr>
+<tr class="even">
+<td>Unidade de medida</td>
+<td>Aluno inscritos</td>
+</tr>
+<tr class="odd">
+<td>Variáveis que compõem o indicador, fonte e instituições que a produz</td>
+<td><p>Variável:</p>
+<p>Fonte: Censo da Educação Superior (INEP)</p>
+<p>Instituição:</p></td>
+</tr>
+<tr class="even">
+<td>Abrangência geográfica</td>
+<td>Município, UF, região, país</td>
+</tr>
+<tr class="odd">
+<td>Níveis de desagregação indicador</td>
+<td>Curso superior, rede de ensino (público privado), grau acadêmico (bachalerado, tecnológico, licenciatura)</td>
+</tr>
+<tr class="even">
+<td>Periodicidade de atualização do indicador</td>
+<td>Anual</td>
+</tr>
+<tr class="odd">
+<td>Série histórica utilizada</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Referências</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Polaridade</td>
+<td>Quanto maior, maior quantidade de alunos inscritos</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="calculando-o-indicador-usando-r-3" class="level3" data-number="3.4.3">
+<h3 data-number="3.4.3" class="anchored" data-anchor-id="calculando-o-indicador-usando-r-3"><span class="header-section-number">3.4.3</span> Calculando o indicador usando R</h3>
+</section>
+<section id="criando-uma-visualização-3" class="level3" data-number="3.4.4">
+<h3 data-number="3.4.4" class="anchored" data-anchor-id="criando-uma-visualização-3"><span class="header-section-number">3.4.4</span> Criando uma visualização</h3>
+</section>
+</section>
+<section id="alunos-ingressantes" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="alunos-ingressantes"><span class="header-section-number">3.5</span> Alunos ingressantes</h2>
+<section id="justificativa-4" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="justificativa-4"><span class="header-section-number">3.5.1</span> Justificativa</h3>
+</section>
+<section id="ficha-do-indicador-4" class="level3" data-number="3.5.2">
+<h3 data-number="3.5.2" class="anchored" data-anchor-id="ficha-do-indicador-4"><span class="header-section-number">3.5.2</span> Ficha do indicador</h3>
+<table class="table">
+<colgroup>
+<col style="width: 39%">
+<col style="width: 60%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nome do Indicador</th>
+<th>Quantidade de alunos ingressantes em cursos da saúde</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Domínio</td>
+<td>Ensino</td>
+</tr>
+<tr class="even">
+<td>Conceitos e definições</td>
+<td>Quantidade de alunos ingressantes em cursos superiores da saúde</td>
+</tr>
+<tr class="odd">
+<td>Método de cálculo</td>
+<td>Somatório da quantidade de alunos ingressantes em cursos de saúde de dada unidade territorial</td>
+</tr>
+<tr class="even">
+<td>Unidade de medida</td>
+<td>Alunos ingressantes</td>
+</tr>
+<tr class="odd">
+<td>Variáveis que compõem o indicador, fonte e instituições que a produz</td>
+<td><p>Variável:</p>
+<p>Fonte: Censo da Educação Superior (INEP)</p>
+<p>Instituição:</p></td>
+</tr>
+<tr class="even">
+<td>Abrangência geográfica</td>
+<td>Município, UF, região, país</td>
+</tr>
+<tr class="odd">
+<td>Níveis de desagregação indicador</td>
+<td>Curso superior, rede de ensino (público privado), grau acadêmico (bachalerado, tecnológico, licenciatura)</td>
+</tr>
+<tr class="even">
+<td>Periodicidade de atualização do indicador</td>
+<td>Anual</td>
+</tr>
+<tr class="odd">
+<td>Série histórica utilizada</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Referências</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Polaridade</td>
+<td>Quanto maior, maior quantidade de alunos ingressantes</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="calculando-o-indicador-usando-r-4" class="level3" data-number="3.5.3">
+<h3 data-number="3.5.3" class="anchored" data-anchor-id="calculando-o-indicador-usando-r-4"><span class="header-section-number">3.5.3</span> Calculando o indicador usando R</h3>
+</section>
+<section id="criando-uma-visualização-4" class="level3" data-number="3.5.4">
+<h3 data-number="3.5.4" class="anchored" data-anchor-id="criando-uma-visualização-4"><span class="header-section-number">3.5.4</span> Criando uma visualização</h3>
+</section>
+</section>
+<section id="alunos-concluintes" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="alunos-concluintes"><span class="header-section-number">3.6</span> Alunos concluintes</h2>
+<section id="justificativa-5" class="level3" data-number="3.6.1">
+<h3 data-number="3.6.1" class="anchored" data-anchor-id="justificativa-5"><span class="header-section-number">3.6.1</span> Justificativa</h3>
+</section>
+<section id="ficha-do-indicador-5" class="level3" data-number="3.6.2">
+<h3 data-number="3.6.2" class="anchored" data-anchor-id="ficha-do-indicador-5"><span class="header-section-number">3.6.2</span> Ficha do indicador</h3>
+<table class="table">
+<colgroup>
+<col style="width: 39%">
+<col style="width: 60%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nome do Indicador</th>
+<th>Quantidade de alunos concluintes em cursos da saúde</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Domínio</td>
+<td>Ensino</td>
+</tr>
+<tr class="even">
+<td>Conceitos e definições</td>
+<td>Quantidade de alunos concluintes em cursos superiores da saúde</td>
+</tr>
+<tr class="odd">
+<td>Método de cálculo</td>
+<td>Somatório da quantidade de alunos concluintes em cursos de saúde de dada unidade territorial</td>
+</tr>
+<tr class="even">
+<td>Unidade de medida</td>
+<td>Alunos concluintes</td>
+</tr>
+<tr class="odd">
+<td>Variáveis que compõem o indicador, fonte e instituições que a produz</td>
+<td><p>Variável:</p>
+<p>Fonte: Censo da Educação Superior (INEP)</p>
+<p>Instituição:</p></td>
+</tr>
+<tr class="even">
+<td>Abrangência geográfica</td>
+<td>Município, UF, região, país</td>
+</tr>
+<tr class="odd">
+<td>Níveis de desagregação indicador</td>
+<td>Curso superior, rede de ensino (público privado), grau acadêmico (bachalerado, tecnológico, licenciatura)</td>
+</tr>
+<tr class="even">
+<td>Periodicidade de atualização do indicador</td>
+<td>Anual</td>
+</tr>
+<tr class="odd">
+<td>Série histórica utilizada</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Referências</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Polaridade</td>
+<td>Quanto maior, maior quantidade de alunos concluintes</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="calculando-o-indicador-usando-r-5" class="level3" data-number="3.6.3">
+<h3 data-number="3.6.3" class="anchored" data-anchor-id="calculando-o-indicador-usando-r-5"><span class="header-section-number">3.6.3</span> Calculando o indicador usando R</h3>
+</section>
+<section id="criando-uma-visualização-5" class="level3" data-number="3.6.4">
+<h3 data-number="3.6.4" class="anchored" data-anchor-id="criando-uma-visualização-5"><span class="header-section-number">3.6.4</span> Criando uma visualização</h3>
+</section>
+</section>
+<section id="inscrições-por-vaga" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="inscrições-por-vaga"><span class="header-section-number">3.7</span> Inscrições por vaga</h2>
+<section id="justificativa-6" class="level3" data-number="3.7.1">
+<h3 data-number="3.7.1" class="anchored" data-anchor-id="justificativa-6"><span class="header-section-number">3.7.1</span> Justificativa</h3>
+</section>
+<section id="ficha-do-indicador-6" class="level3" data-number="3.7.2">
+<h3 data-number="3.7.2" class="anchored" data-anchor-id="ficha-do-indicador-6"><span class="header-section-number">3.7.2</span> Ficha do indicador</h3>
+<table class="table">
+<colgroup>
+<col style="width: 39%">
+<col style="width: 60%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nome do Indicador</th>
+<th>Razão de alunos inscritos por vaga em cursos de saúde</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Domínio</td>
+<td>Ensino</td>
+</tr>
+<tr class="even">
+<td>Conceitos e definições</td>
+<td>Razão do número de alunos inscritos pelo número total de vagas ofertadas</td>
+</tr>
+<tr class="odd">
+<td>Método de cálculo</td>
+<td><p>Numerador: Quantidade de alunos inscritos</p>
+<p>Denominador: total de vagas ofertadas</p></td>
+</tr>
+<tr class="even">
+<td>Unidade de medida</td>
+<td>Não se aplica</td>
+</tr>
+<tr class="odd">
+<td>Variáveis que compõem o indicador, fonte e instituições que a produz</td>
+<td><p>Variável:</p>
+<p>Fonte: Censo da Educação Superior (INEP)</p>
+<p>Instituição:</p></td>
+</tr>
+<tr class="even">
+<td>Abrangência geográfica</td>
+<td>Município, UF, região, país</td>
+</tr>
+<tr class="odd">
+<td>Níveis de desagregação indicador</td>
+<td>Curso superior, rede de ensino (público privado), grau acadêmico (bachalerado, tecnológico, licenciatura)</td>
+</tr>
+<tr class="even">
+<td>Periodicidade de atualização do indicador</td>
+<td>Anual</td>
+</tr>
+<tr class="odd">
+<td>Série histórica utilizada</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Referências</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Polaridade</td>
+<td>Quanto maior, maior a concorrência pelas vagas disponíveis</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="calculando-o-indicador-usando-r-6" class="level3" data-number="3.7.3">
+<h3 data-number="3.7.3" class="anchored" data-anchor-id="calculando-o-indicador-usando-r-6"><span class="header-section-number">3.7.3</span> Calculando o indicador usando R</h3>
+</section>
+<section id="criando-uma-visualização-6" class="level3" data-number="3.7.4">
+<h3 data-number="3.7.4" class="anchored" data-anchor-id="criando-uma-visualização-6"><span class="header-section-number">3.7.4</span> Criando uma visualização</h3>
+</section>
+</section>
+<section id="taxa-de-graduados" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="taxa-de-graduados"><span class="header-section-number">3.8</span> Taxa de graduados</h2>
+<section id="justificativa-7" class="level3" data-number="3.8.1">
+<h3 data-number="3.8.1" class="anchored" data-anchor-id="justificativa-7"><span class="header-section-number">3.8.1</span> Justificativa</h3>
+</section>
+<section id="ficha-do-indicador-7" class="level3" data-number="3.8.2">
+<h3 data-number="3.8.2" class="anchored" data-anchor-id="ficha-do-indicador-7"><span class="header-section-number">3.8.2</span> Ficha do indicador</h3>
+<table class="table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 61%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nome do Indicador</th>
+<th>Taxa de graduados em cursos de saúde</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Domínio</td>
+<td>Ensino</td>
+</tr>
+<tr class="even">
+<td>Conceitos e definições</td>
+<td>Razão entre o total de alunos que concluíram o curso pelo total de alunos ingressantes no primeiro ano do curso</td>
+</tr>
+<tr class="odd">
+<td>Método de cálculo</td>
+<td><p>Numerador: Quantidade de alunos concluintes</p>
+<p>Denominador: total de ingressantes no primeiro ano do curso</p></td>
+</tr>
+<tr class="even">
+<td>Unidade de medida</td>
+<td>Não se aplica</td>
+</tr>
+<tr class="odd">
+<td>Variáveis que compõem o indicador, fonte e instituições que a produz</td>
+<td><p>Variável:</p>
+<p>Fonte: Censo da Educação Superior (INEP)</p>
+<p>Instituição:</p></td>
+</tr>
+<tr class="even">
+<td>Abrangência geográfica</td>
+<td>Município, UF, região, país</td>
+</tr>
+<tr class="odd">
+<td>Níveis de desagregação indicador</td>
+<td>Curso superior, rede de ensino (público privado), grau acadêmico (bachalerado, tecnológico, licenciatura)</td>
+</tr>
+<tr class="even">
+<td>Periodicidade de atualização do indicador</td>
+<td>Anual</td>
+</tr>
+<tr class="odd">
+<td>Série histórica utilizada</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Referências</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Polaridade</td>
+<td>Quanto maior, maior a reposição de alunos no processo de formação</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="calculando-o-indicador-usando-r-7" class="level3" data-number="3.8.3">
+<h3 data-number="3.8.3" class="anchored" data-anchor-id="calculando-o-indicador-usando-r-7"><span class="header-section-number">3.8.3</span> Calculando o indicador usando R</h3>
+</section>
+<section id="criando-uma-visualização-7" class="level3" data-number="3.8.4">
+<h3 data-number="3.8.4" class="anchored" data-anchor-id="criando-uma-visualização-7"><span class="header-section-number">3.8.4</span> Criando uma visualização</h3>
+</section>
+</section>
+<section id="qualidade-de-cursos" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="qualidade-de-cursos"><span class="header-section-number">3.9</span> Qualidade de cursos</h2>
+<section id="justificativa-8" class="level3" data-number="3.9.1">
+<h3 data-number="3.9.1" class="anchored" data-anchor-id="justificativa-8"><span class="header-section-number">3.9.1</span> Justificativa</h3>
+</section>
+<section id="ficha-do-indicador-8" class="level3" data-number="3.9.2">
+<h3 data-number="3.9.2" class="anchored" data-anchor-id="ficha-do-indicador-8"><span class="header-section-number">3.9.2</span> Ficha do indicador</h3>
+<table class="table">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 65%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nome do Indicador</th>
+<th>Qualidade de cursos de educação superior</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Domínio</td>
+<td>Ensino</td>
+</tr>
+<tr class="even">
+<td>Conceitos e definições</td>
+<td>Notas de alunos no Exame Nacional de Desempenho dos Estudantes (ENADE)</td>
+</tr>
+<tr class="odd">
+<td>Método de cálculo</td>
+<td>Média das notas de cursos superiores avaliados pelo Exame Nacional de Desempenho dos Estudantes (ENADE) de dado curso e localidade</td>
+</tr>
+<tr class="even">
+<td>Unidade de medida</td>
+<td>Não se aplica</td>
+</tr>
+<tr class="odd">
+<td>Variáveis que compõem o indicador, fonte e instituições que a produz</td>
+<td><p>Variável:</p>
+<p>Fonte: ENADE</p>
+<p>Instituição:</p></td>
+</tr>
+<tr class="even">
+<td>Abrangência geográfica</td>
+<td>Município, UF, região, país</td>
+</tr>
+<tr class="odd">
+<td>Níveis de desagregação indicador</td>
+<td>Curso superior, rede de ensino (público privado), grau acadêmico (bachalerado, tecnológico, licenciatura)</td>
+</tr>
+<tr class="even">
+<td>Periodicidade de atualização do indicador</td>
+<td>A depender do ciclo de avaliação de cursos</td>
+</tr>
+<tr class="odd">
+<td>Série histórica utilizada</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Referências</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Polaridade</td>
+<td>Quanto maior, maior a qualidade dos cursos</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="calculando-o-indicador-usando-r-8" class="level3" data-number="3.9.3">
+<h3 data-number="3.9.3" class="anchored" data-anchor-id="calculando-o-indicador-usando-r-8"><span class="header-section-number">3.9.3</span> Calculando o indicador usando R</h3>
+</section>
+<section id="criando-uma-visualização-8" class="level3" data-number="3.9.4">
+<h3 data-number="3.9.4" class="anchored" data-anchor-id="criando-uma-visualização-8"><span class="header-section-number">3.9.4</span> Criando uma visualização</h3>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

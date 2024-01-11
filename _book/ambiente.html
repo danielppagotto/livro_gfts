@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Indicadores para Gestão da Força de Trabalho em Saúde - 6&nbsp; Indicadores de ambiente favorável</title>
+<title>Indicadores para Governança e Gestão da Força de Trabalho em Saúde - 6&nbsp; Indicadores de ambiente favorável</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,7 +57,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -76,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
       <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ambiente.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Indicadores de ambiente favorável</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -88,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Indicadores para Gestão da Força de Trabalho em Saúde</a> 
+      <a href="./">Indicadores para Governança e Gestão da Força de Trabalho em Saúde</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -158,7 +159,47 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#violência" id="toc-violência" class="nav-link active" data-scroll-target="#violência"><span class="header-section-number">6.1</span> Violência</a>
+  <ul class="collapse">
+  <li><a href="#justificativa" id="toc-justificativa" class="nav-link" data-scroll-target="#justificativa"><span class="header-section-number">6.1.1</span> Justificativa</a></li>
+  <li><a href="#ficha-do-indicador" id="toc-ficha-do-indicador" class="nav-link" data-scroll-target="#ficha-do-indicador"><span class="header-section-number">6.1.2</span> Ficha do indicador</a></li>
+  <li><a href="#calculando-o-indicador-usando-r" id="toc-calculando-o-indicador-usando-r" class="nav-link" data-scroll-target="#calculando-o-indicador-usando-r"><span class="header-section-number">6.1.3</span> Calculando o indicador usando R</a></li>
+  <li><a href="#criando-uma-visualização" id="toc-criando-uma-visualização" class="nav-link" data-scroll-target="#criando-uma-visualização"><span class="header-section-number">6.1.4</span> Criando uma visualização</a></li>
+  </ul></li>
+  <li><a href="#qualidade-da-educação-no-início-do-ef" id="toc-qualidade-da-educação-no-início-do-ef" class="nav-link" data-scroll-target="#qualidade-da-educação-no-início-do-ef"><span class="header-section-number">6.2</span> Qualidade da educação no início do EF</a>
+  <ul class="collapse">
+  <li><a href="#justificativa-1" id="toc-justificativa-1" class="nav-link" data-scroll-target="#justificativa-1"><span class="header-section-number">6.2.1</span> Justificativa</a></li>
+  <li><a href="#ficha-do-indicador-1" id="toc-ficha-do-indicador-1" class="nav-link" data-scroll-target="#ficha-do-indicador-1"><span class="header-section-number">6.2.2</span> Ficha do indicador</a></li>
+  <li><a href="#calculando-o-indicador-usando-r-1" id="toc-calculando-o-indicador-usando-r-1" class="nav-link" data-scroll-target="#calculando-o-indicador-usando-r-1"><span class="header-section-number">6.2.3</span> Calculando o indicador usando R</a></li>
+  <li><a href="#criando-uma-visualização-1" id="toc-criando-uma-visualização-1" class="nav-link" data-scroll-target="#criando-uma-visualização-1"><span class="header-section-number">6.2.4</span> Criando uma visualização</a></li>
+  </ul></li>
+  <li><a href="#qualidade-da-educação-no-final-do-ef" id="toc-qualidade-da-educação-no-final-do-ef" class="nav-link" data-scroll-target="#qualidade-da-educação-no-final-do-ef"><span class="header-section-number">6.3</span> Qualidade da educação no final do EF</a>
+  <ul class="collapse">
+  <li><a href="#justificativa-2" id="toc-justificativa-2" class="nav-link" data-scroll-target="#justificativa-2"><span class="header-section-number">6.3.1</span> Justificativa</a></li>
+  <li><a href="#ficha-do-indicador-2" id="toc-ficha-do-indicador-2" class="nav-link" data-scroll-target="#ficha-do-indicador-2"><span class="header-section-number">6.3.2</span> Ficha do indicador</a></li>
+  <li><a href="#calculando-o-indicador-usando-r-2" id="toc-calculando-o-indicador-usando-r-2" class="nav-link" data-scroll-target="#calculando-o-indicador-usando-r-2"><span class="header-section-number">6.3.3</span> Calculando o indicador usando R</a></li>
+  <li><a href="#criando-uma-visualização-2" id="toc-criando-uma-visualização-2" class="nav-link" data-scroll-target="#criando-uma-visualização-2"><span class="header-section-number">6.3.4</span> Criando uma visualização</a></li>
+  </ul></li>
+  <li><a href="#densidade-de-equipamentos" id="toc-densidade-de-equipamentos" class="nav-link" data-scroll-target="#densidade-de-equipamentos"><span class="header-section-number">6.4</span> Densidade de equipamentos</a>
+  <ul class="collapse">
+  <li><a href="#justificativa-3" id="toc-justificativa-3" class="nav-link" data-scroll-target="#justificativa-3"><span class="header-section-number">6.4.1</span> Justificativa</a></li>
+  <li><a href="#ficha-do-indicador-3" id="toc-ficha-do-indicador-3" class="nav-link" data-scroll-target="#ficha-do-indicador-3"><span class="header-section-number">6.4.2</span> Ficha do indicador</a></li>
+  <li><a href="#calculando-o-indicador-usando-r-3" id="toc-calculando-o-indicador-usando-r-3" class="nav-link" data-scroll-target="#calculando-o-indicador-usando-r-3"><span class="header-section-number">6.4.3</span> Calculando o indicador usando R</a></li>
+  <li><a href="#criando-uma-visualização-3" id="toc-criando-uma-visualização-3" class="nav-link" data-scroll-target="#criando-uma-visualização-3"><span class="header-section-number">6.4.4</span> Criando uma visualização</a></li>
+  </ul></li>
+  <li><a href="#vulnerabilidade" id="toc-vulnerabilidade" class="nav-link" data-scroll-target="#vulnerabilidade"><span class="header-section-number">6.5</span> Vulnerabilidade</a>
+  <ul class="collapse">
+  <li><a href="#justificativa-4" id="toc-justificativa-4" class="nav-link" data-scroll-target="#justificativa-4"><span class="header-section-number">6.5.1</span> Justificativa</a></li>
+  <li><a href="#ficha-do-indicador-4" id="toc-ficha-do-indicador-4" class="nav-link" data-scroll-target="#ficha-do-indicador-4"><span class="header-section-number">6.5.2</span> Ficha do indicador</a></li>
+  <li><a href="#calculando-o-indicador-usando-r-4" id="toc-calculando-o-indicador-usando-r-4" class="nav-link" data-scroll-target="#calculando-o-indicador-usando-r-4"><span class="header-section-number">6.5.3</span> Calculando o indicador usando R</a></li>
+  <li><a href="#criando-uma-visualização-4" id="toc-criando-uma-visualização-4" class="nav-link" data-scroll-target="#criando-uma-visualização-4"><span class="header-section-number">6.5.4</span> Criando uma visualização</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -180,8 +221,388 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="violência" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="violência"><span class="header-section-number">6.1</span> Violência</h2>
+<section id="justificativa" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="justificativa"><span class="header-section-number">6.1.1</span> Justificativa</h3>
+</section>
+<section id="ficha-do-indicador" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="ficha-do-indicador"><span class="header-section-number">6.1.2</span> Ficha do indicador</h3>
+<table class="table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 61%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nome do Indicador</th>
+<th>Taxa de mortalidade por homicídios</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Domínio</td>
+<td>Ambiente favorável</td>
+</tr>
+<tr class="even">
+<td>Conceitos e definições</td>
+<td>Violência no contexto local</td>
+</tr>
+<tr class="odd">
+<td>Método de cálculo</td>
+<td><p>Numerador: Contagem do número de casos de óbitos de acordo com o CID-10 de X85-Y09 em dada unidade territorial.</p>
+<p>Denominador: número de habitantes do local.</p>
+<p>Multiplicador: 100 mil</p></td>
+</tr>
+<tr class="even">
+<td>Unidade de medida</td>
+<td>Óbitos por 100 mil habitantes</td>
+</tr>
+<tr class="odd">
+<td>Variáveis que compõem o indicador, fonte e instituições que a produz</td>
+<td><p>Variável:</p>
+<p>Fonte: Sistema de Informações sobre Mortalidade (SIM) e Projeções populacionais (CGIAE/DAENT/SVS/MS)</p>
+<p>Instituição:</p></td>
+</tr>
+<tr class="even">
+<td>Abrangência geográfica</td>
+<td>Município, UF, região, país</td>
+</tr>
+<tr class="odd">
+<td>Níveis de desagregação indicador</td>
+<td>Não se aplica</td>
+</tr>
+<tr class="even">
+<td>Periodicidade de atualização do indicador</td>
+<td>Mensal</td>
+</tr>
+<tr class="odd">
+<td>Série histórica utilizada</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Referências</td>
+<td>Montini et al.&nbsp;(2021)</td>
+</tr>
+<tr class="odd">
+<td>Polaridade</td>
+<td>Quanto maior, maiores as taxas de violência</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="calculando-o-indicador-usando-r" class="level3" data-number="6.1.3">
+<h3 data-number="6.1.3" class="anchored" data-anchor-id="calculando-o-indicador-usando-r"><span class="header-section-number">6.1.3</span> Calculando o indicador usando R</h3>
+</section>
+<section id="criando-uma-visualização" class="level3" data-number="6.1.4">
+<h3 data-number="6.1.4" class="anchored" data-anchor-id="criando-uma-visualização"><span class="header-section-number">6.1.4</span> Criando uma visualização</h3>
+</section>
+</section>
+<section id="qualidade-da-educação-no-início-do-ef" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="qualidade-da-educação-no-início-do-ef"><span class="header-section-number">6.2</span> Qualidade da educação no início do EF</h2>
+<section id="justificativa-1" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="justificativa-1"><span class="header-section-number">6.2.1</span> Justificativa</h3>
+</section>
+<section id="ficha-do-indicador-1" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="ficha-do-indicador-1"><span class="header-section-number">6.2.2</span> Ficha do indicador</h3>
+<table class="table">
+<colgroup>
+<col style="width: 43%">
+<col style="width: 56%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nome do Indicador</th>
+<th>Qualidade da educação nos anos iniciais do ensino fundamental</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Domínio</td>
+<td>Ambiente favorável</td>
+</tr>
+<tr class="even">
+<td>Conceitos e definições</td>
+<td>Nota do IDEB do município para os anos iniciais (1º ao 5º ano)</td>
+</tr>
+<tr class="odd">
+<td>Método de cálculo</td>
+<td>O indicador já é calculado pelo próprio INEP</td>
+</tr>
+<tr class="even">
+<td>Unidade de medida</td>
+<td>Não se aplica</td>
+</tr>
+<tr class="odd">
+<td>Variáveis que compõem o indicador, fonte e instituições que a produz</td>
+<td><p>Variável:</p>
+<p>Fonte: Índice de Desenvolvimento da Educação Básica (Ideb) para os anos iniciais do INEP</p>
+<p>Instituição:</p></td>
+</tr>
+<tr class="even">
+<td>Abrangência geográfica</td>
+<td>Município, UF, região, país</td>
+</tr>
+<tr class="odd">
+<td>Níveis de desagregação indicador</td>
+<td>Não se aplica</td>
+</tr>
+<tr class="even">
+<td>Periodicidade de atualização do indicador</td>
+<td>Anual</td>
+</tr>
+<tr class="odd">
+<td>Série histórica utilizada</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Referências</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Polaridade</td>
+<td>Quanto maior, melhor a educação local</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="calculando-o-indicador-usando-r-1" class="level3" data-number="6.2.3">
+<h3 data-number="6.2.3" class="anchored" data-anchor-id="calculando-o-indicador-usando-r-1"><span class="header-section-number">6.2.3</span> Calculando o indicador usando R</h3>
+</section>
+<section id="criando-uma-visualização-1" class="level3" data-number="6.2.4">
+<h3 data-number="6.2.4" class="anchored" data-anchor-id="criando-uma-visualização-1"><span class="header-section-number">6.2.4</span> Criando uma visualização</h3>
+</section>
+</section>
+<section id="qualidade-da-educação-no-final-do-ef" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="qualidade-da-educação-no-final-do-ef"><span class="header-section-number">6.3</span> Qualidade da educação no final do EF</h2>
+<section id="justificativa-2" class="level3" data-number="6.3.1">
+<h3 data-number="6.3.1" class="anchored" data-anchor-id="justificativa-2"><span class="header-section-number">6.3.1</span> Justificativa</h3>
+</section>
+<section id="ficha-do-indicador-2" class="level3" data-number="6.3.2">
+<h3 data-number="6.3.2" class="anchored" data-anchor-id="ficha-do-indicador-2"><span class="header-section-number">6.3.2</span> Ficha do indicador</h3>
+<table class="table">
+<colgroup>
+<col style="width: 43%">
+<col style="width: 56%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nome do Indicador</th>
+<th>Qualidade da educação nos anos finais do ensino fundamental</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Domínio</td>
+<td>Ambiente favorável</td>
+</tr>
+<tr class="even">
+<td>Conceitos e definições</td>
+<td>Nota do IDEB do município (6º ao 9º ano)</td>
+</tr>
+<tr class="odd">
+<td>Método de cálculo</td>
+<td>O indicador já é calculado pelo próprio INEP</td>
+</tr>
+<tr class="even">
+<td>Unidade de medida</td>
+<td>Não se aplica</td>
+</tr>
+<tr class="odd">
+<td>Variáveis que compõem o indicador, fonte e instituições que a produz</td>
+<td><p>Variável:</p>
+<p>Fonte: Índice de Desenvolvimento da Educação Básica (Ideb) para os anos iniciais do INEP</p>
+<p>Instituição:</p></td>
+</tr>
+<tr class="even">
+<td>Abrangência geográfica</td>
+<td>Município, UF, região, país</td>
+</tr>
+<tr class="odd">
+<td>Níveis de desagregação indicador</td>
+<td>Não se aplica</td>
+</tr>
+<tr class="even">
+<td>Periodicidade de atualização do indicador</td>
+<td>Anual</td>
+</tr>
+<tr class="odd">
+<td>Série histórica utilizada</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Referências</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Polaridade</td>
+<td>Quanto maior, melhor a educação local</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="calculando-o-indicador-usando-r-2" class="level3" data-number="6.3.3">
+<h3 data-number="6.3.3" class="anchored" data-anchor-id="calculando-o-indicador-usando-r-2"><span class="header-section-number">6.3.3</span> Calculando o indicador usando R</h3>
+</section>
+<section id="criando-uma-visualização-2" class="level3" data-number="6.3.4">
+<h3 data-number="6.3.4" class="anchored" data-anchor-id="criando-uma-visualização-2"><span class="header-section-number">6.3.4</span> Criando uma visualização</h3>
+</section>
+</section>
+<section id="densidade-de-equipamentos" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="densidade-de-equipamentos"><span class="header-section-number">6.4</span> Densidade de equipamentos</h2>
+<section id="justificativa-3" class="level3" data-number="6.4.1">
+<h3 data-number="6.4.1" class="anchored" data-anchor-id="justificativa-3"><span class="header-section-number">6.4.1</span> Justificativa</h3>
+</section>
+<section id="ficha-do-indicador-3" class="level3" data-number="6.4.2">
+<h3 data-number="6.4.2" class="anchored" data-anchor-id="ficha-do-indicador-3"><span class="header-section-number">6.4.2</span> Ficha do indicador</h3>
+<table class="table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 64%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nome do Indicador</th>
+<th>Densidade de equipamentos por população</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Domínio</td>
+<td>Ambiente favorável</td>
+</tr>
+<tr class="even">
+<td>Conceitos e definições</td>
+<td>Quantidade de equipamentos por 10 mil habitantes de dada localidade</td>
+</tr>
+<tr class="odd">
+<td>Método de cálculo</td>
+<td><p>Numerador: Contagem dos equipamentos Raio-X, Tomógrafo, Ultrassom, Mamógrafo e Ressonância.</p>
+<p>Denominador: número de habitantes do local.</p>
+<p>Multiplicador: 10 mil</p></td>
+</tr>
+<tr class="even">
+<td>Unidade de medida</td>
+<td>Equipamentos por 10 mil habitantes</td>
+</tr>
+<tr class="odd">
+<td>Variáveis que compõem o indicador, fonte e instituições que a produz</td>
+<td><p>Variável:</p>
+<p>Fonte: Cadastro Nacional de Estabelecimentos de Saúde - Equipamentos (CNES-EQ) e Projeções populacionais (CGIAE/DAENT/SVS/MS)</p>
+<p>Instituição:</p></td>
+</tr>
+<tr class="even">
+<td>Abrangência geográfica</td>
+<td>Município, UF, região, país</td>
+</tr>
+<tr class="odd">
+<td>Níveis de desagregação indicador</td>
+<td>Não se aplica</td>
+</tr>
+<tr class="even">
+<td>Periodicidade de atualização do indicador</td>
+<td>Mensal</td>
+</tr>
+<tr class="odd">
+<td>Série histórica utilizada</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Referências</td>
+<td><p>Santos et al.&nbsp;(2019),</p>
+<p>Rocha et al.&nbsp;(2020)</p></td>
+</tr>
+<tr class="odd">
+<td>Polaridade</td>
+<td>Quanto maior, maior a densidade de equipamentos pela população</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="calculando-o-indicador-usando-r-3" class="level3" data-number="6.4.3">
+<h3 data-number="6.4.3" class="anchored" data-anchor-id="calculando-o-indicador-usando-r-3"><span class="header-section-number">6.4.3</span> Calculando o indicador usando R</h3>
+</section>
+<section id="criando-uma-visualização-3" class="level3" data-number="6.4.4">
+<h3 data-number="6.4.4" class="anchored" data-anchor-id="criando-uma-visualização-3"><span class="header-section-number">6.4.4</span> Criando uma visualização</h3>
+</section>
+</section>
+<section id="vulnerabilidade" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="vulnerabilidade"><span class="header-section-number">6.5</span> Vulnerabilidade</h2>
+<section id="justificativa-4" class="level3" data-number="6.5.1">
+<h3 data-number="6.5.1" class="anchored" data-anchor-id="justificativa-4"><span class="header-section-number">6.5.1</span> Justificativa</h3>
+</section>
+<section id="ficha-do-indicador-4" class="level3" data-number="6.5.2">
+<h3 data-number="6.5.2" class="anchored" data-anchor-id="ficha-do-indicador-4"><span class="header-section-number">6.5.2</span> Ficha do indicador</h3>
+<table class="table">
+<colgroup>
+<col style="width: 45%">
+<col style="width: 54%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nome do Indicador</th>
+<th>Vulnerabilidade social</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Domínio</td>
+<td>Ambiente favorável</td>
+</tr>
+<tr class="even">
+<td>Conceitos e definições</td>
+<td>O GeoSES é um Índice socioeconômico para pesquisas em saúde e sociedade no Brasil.</td>
+</tr>
+<tr class="odd">
+<td>Método de cálculo</td>
+<td>Indicador já calculado</td>
+</tr>
+<tr class="even">
+<td>Unidade de medida</td>
+<td>Não se aplica</td>
+</tr>
+<tr class="odd">
+<td>Variáveis que compõem o indicador, fonte e instituições que a produz</td>
+<td><p>Variável:</p>
+<p>Fonte: Geoses</p>
+<p>Instituição:</p></td>
+</tr>
+<tr class="even">
+<td>Abrangência geográfica</td>
+<td>Município, UF, região, país</td>
+</tr>
+<tr class="odd">
+<td>Níveis de desagregação indicador</td>
+<td>Não se aplica</td>
+</tr>
+<tr class="even">
+<td>Periodicidade de atualização do indicador</td>
+<td>Conforme o censo</td>
+</tr>
+<tr class="odd">
+<td>Série histórica utilizada</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Referências</td>
+<td>Barrozo et al.&nbsp;(2020)</td>
+</tr>
+<tr class="odd">
+<td>Polaridade</td>
+<td>Quanto maior, menor a vulnerabilidade local</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="calculando-o-indicador-usando-r-4" class="level3" data-number="6.5.3">
+<h3 data-number="6.5.3" class="anchored" data-anchor-id="calculando-o-indicador-usando-r-4"><span class="header-section-number">6.5.3</span> Calculando o indicador usando R</h3>
+</section>
+<section id="criando-uma-visualização-4" class="level3" data-number="6.5.4">
+<h3 data-number="6.5.4" class="anchored" data-anchor-id="criando-uma-visualização-4"><span class="header-section-number">6.5.4</span> Criando uma visualização</h3>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
