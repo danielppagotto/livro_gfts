@@ -354,9 +354,7 @@ shapefile_combinado |>
 
 ### Criando uma visualização
 
-## Vínculos
-
-### Justificativa
+## Média de vínculos por profissional
 
 ### Ficha do indicador
 
@@ -391,6 +389,37 @@ shapefile_combinado |>
 +----------------------------------------------------------------------+-------------------------------------------------------------------------------------------+
 
 ### Calculando o indicador usando R
+
+```{r}
+
+vinculos_medio <- read_csv("bases_apoio/vinculos_medio.csv") %>% 
+                  left_join(hierarquia_municipios, by = c("CODUFMUN"="cod_municipio")) %>%
+                  select("uf_sigla", "CBO", "CPF_PROF", "municipio_pad")
+
+qtd_vinculos <- vinculos_medio %>% 
+                group_by(CPF_PROF, municipio_pad) %>% 
+                count() %>% 
+                ungroup()
+
+vinc_municipios <- qtd_vinculos %>% 
+                    group_by(municipio_pad) %>% 
+                    summarise(media_vinc = mean(n)) %>%
+                    arrange(media_vinc) %>% 
+                    ungroup()
+```
+
+```{r}
+library(forcats) #ordernar coluna
+
+vinc_municipios %>%
+  mutate(municipio_pad = fct_reorder(municipio_pad, media_vinc)) %>%
+  slice_max(media_vinc, n = 10) %>% 
+  ggplot(aes(x = municipio_pad, y = media_vinc)) +
+  geom_col(color = "White") + 
+  coord_flip() + 
+  theme_bw() +
+  labs(x = "Município", y = "Média de Vínculos", title = "Média de Vínculos por Profissional")
+```
 
 ### Criando uma visualização
 
