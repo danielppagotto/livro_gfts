@@ -390,6 +390,12 @@ shapefile_combinado |>
 
 ### Calculando o indicador usando R
 
+Vamos ler a base de dados e fazer uma junção com a base Hierarquia de Municípios para podermos selecionar a variável do nome dos municípios (municipio_pad).
+
+Após isso, iremos agrupar os dados por CPF e por município e contar o número de ocorrências, desagrupando após isso.
+
+Por fim, iremos fazer um agrupamento por cada município, ordenando pela média de vínculos, e depois desagrupando os dados.
+
 ```{r}
 
 vinculos_medio <- read_csv("bases_apoio/vinculos_medio.csv") %>% 
@@ -407,6 +413,10 @@ vinc_municipios <- qtd_vinculos %>%
                     arrange(media_vinc) %>% 
                     ungroup()
 ```
+
+Para gerar um gráfico, iremos reordernar os municípios de acordo com a média de vínculos. Selecionaremos os 10 com maiores destaques de média.
+
+Após isso, usaremos a função ggplot e selecionar qual será o eixo X e o eixo Y. Em seguida, definir um tipo de barras e iverter para elas se tornarem horizontais. Por fim, aplicaremos um tema preto e branco e renomear os eixos e colocar um título para o gráfico.
 
 ```{r}
 library(forcats) #ordernar coluna
