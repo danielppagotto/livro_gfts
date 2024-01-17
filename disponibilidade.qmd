@@ -44,7 +44,7 @@
 
 ### Criando uma visualização
 
-## Densidade de profissionais atuantes
+## Densidade de profissionais de saúde atuantes
 
 ### Justificativa
 
@@ -88,7 +88,7 @@
 
 ### Criando uma visualização
 
-## Saúde feminina
+## Força de trabalho em saúde feminina
 
 ### Justificativa
 
