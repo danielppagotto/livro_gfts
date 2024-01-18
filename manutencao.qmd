@@ -352,39 +352,35 @@ shapefile_combinado |>
 
 ### Calculando o indicador usando R
 
+-   Iremos analisar
+
+-   
+
 ```{r}
 #| echo: FALSE
 #| output: FALSE
 
 library(readr)
+library(readxl)
 
-cnes_PF <- read_csv("bases_apoio/cnes.PF.csv")
-
-capitais <- c('120040', '270430', '160030', '130260',
-                          '292740', '230440', '530010', '320530',
-                          '520870', '211130', '510340', '500270',
-                          '310620', '150140', '250750', '410690',
-                          '261160', '221100', '330455', '240810',
-                          '431490', '110020', '140010', '420540',
-                          '355030', '280030', '172100')
-```
-
-\
-
-```{r}
-cnes_tratado <- 
-  cnes_PF %>% 
-    mutate(COMPETEN = as.character(COMPETEN)) %>% 
-    filter(COMPETEN == '202305', 
-           str_detect(CBO, "225") %>%  
-    select(CODUFMUN, CBO, CPF_PROF, HORAOUTR, HORAHOSP, HORA_AMB) %>% 
-    mutate(HORA = HORAOUTR + HORAHOSP + HORA_AMB)
+ch_media_capitais <- read_csv("bases_apoio/ch_media_capitais.csv")
+hierarquia_municipios <- read_excel("bases_apoio/hierarquia_municipios.xlsx")
 ```
 
 ```{r}
-consulta_ch_individual <- cnes_tratado %>%
-  group_by(CODUFMUN, CPF_PROF) %>%
-  summarise(CH_INDIVIDUAL = sum(HORA))
+ch_media_capitais <- ch_media_capitais %>% 
+  left_join(hierarquia_municipios, by = c("CODUFMUN" = "cod_municipio")) %>% 
+  select("municipio_pad", "MEDIA_PROF")
+```
+
+```{r}
+ch_media_capitais %>%
+  mutate(municipio_pad = fct_reorder(municipio_pad, MEDIA_PROF)) %>%
+  ggplot(aes(x = municipio_pad, y = MEDIA_PROF)) +
+  geom_col(color = "White") + 
+  coord_flip() + 
+  theme_bw() +
+  labs(x = "Capitais", y = "Média de horas trabalhadas", title = "Carga horária de trabalho média")
 ```
 
 ### Criando uma visualização
