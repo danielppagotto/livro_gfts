@@ -352,9 +352,7 @@ shapefile_combinado |>
 
 ### Calculando o indicador usando R
 
--   Iremos analisar
-
--   
+-   Iremos carregar a base do CNES de média de horas trabalhadas nas capitais e, também, a base de informações de municípios.
 
 ```{r}
 #| echo: FALSE
@@ -363,9 +361,11 @@ shapefile_combinado |>
 library(readr)
 library(readxl)
 
-ch_media_capitais <- read_csv("bases_apoio/ch_media_capitais.csv")
-hierarquia_municipios <- read_excel("bases_apoio/hierarquia_municipios.xlsx")
+ch_media_capitais <- read_csv("GitHub/livro_gfts/bases_apoio/ch_media_capitais.csv")
+hierarquia_municipios <- read_excel("GitHub/livro_gfts/bases_apoio/hierarquia_municipios.xlsx")
 ```
+
+-   Iremos junstar as duas bases e selecionar as variáveis necessárias: nome da capital e média de trabalho.
 
 ```{r}
 ch_media_capitais <- ch_media_capitais %>% 
@@ -373,11 +373,15 @@ ch_media_capitais <- ch_media_capitais %>%
   select("municipio_pad", "MEDIA_PROF")
 ```
 
+-   Vamos gerar um gráfico para visualizarmos os resultados encontrados.
+
+-   Primeiramente, vamos deixá-los em ordem decrescente. Após isso, devemos escolher o nosso eixo X e o eixo Y. Selecionaremos o gráfico de barra e iremos escolher um tema de cor e inverteremos o lado do gráfico para ele poder ficar na horizontal. Por fim, vamos aplicar um tema de fundo renomear as variáveis.
+
 ```{r}
 ch_media_capitais %>%
   mutate(municipio_pad = fct_reorder(municipio_pad, MEDIA_PROF)) %>%
   ggplot(aes(x = municipio_pad, y = MEDIA_PROF)) +
-  geom_col(color = "White") + 
+  geom_col(fill = "skyblue",color = "White") + 
   coord_flip() + 
   theme_bw() +
   labs(x = "Capitais", y = "Média de horas trabalhadas", title = "Carga horária de trabalho média")

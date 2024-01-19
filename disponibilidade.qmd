@@ -130,7 +130,7 @@
 
 ### Criando uma visualização
 
-## Full-time equivalent
+## Força de trabalho em equivalente tempo integral (full-time equivalent)
 
 ### Justificativa
 
@@ -172,7 +172,7 @@
 
 ### Criando uma visualização
 
-## Média de Idade
+## Média de Idade dos profissionais de saúde
 
 ### Justificativa
 
