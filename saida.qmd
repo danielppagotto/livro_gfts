@@ -1,6 +1,6 @@
 # Indicadores de saída
 
-## Retenção de profissionais
+## Taxa de retenção de profissionais localizados em região de saúde
 
 ### Justificativa
 

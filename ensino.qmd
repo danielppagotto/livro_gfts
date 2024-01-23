@@ -2,7 +2,7 @@
 
 Aqui estão apresentadas as variáveis relacionadas ao ensino.
 
-## Quantidade de cursos
+## Quantidade de cursos de saúde
 
 ### Justificativa
 
@@ -42,7 +42,7 @@ Aqui estão apresentadas as variáveis relacionadas ao ensino.
 
 ### Criando uma visualização
 
-## Cursos EAD
+## Percentual de cursos EaD em saúde
 
 ### Justificativa
 
@@ -84,7 +84,7 @@ Aqui estão apresentadas as variáveis relacionadas ao ensino.
 
 ### Criando uma visualização
 
-## Quantidade de vagas
+## Quantidade de vagas oferecidas em cursos da saúde
 
 ### Justificativa
 
@@ -124,7 +124,7 @@ Aqui estão apresentadas as variáveis relacionadas ao ensino.
 
 ### Criando uma visualização
 
-## Alunos inscritos
+## Quantidade de alunos inscritos em cursos da saúde
 
 ### Justificativa
 
@@ -164,7 +164,7 @@ Aqui estão apresentadas as variáveis relacionadas ao ensino.
 
 ### Criando uma visualização
 
-## Alunos ingressantes
+## Quantidade de alunos ingressantes em cursos da saúde
 
 ### Justificativa
 
@@ -204,7 +204,7 @@ Aqui estão apresentadas as variáveis relacionadas ao ensino.
 
 ### Criando uma visualização
 
-## Alunos concluintes
+## Quantidade de alunos concluintes em cursos da saúde
 
 ### Justificativa
 
@@ -244,7 +244,7 @@ Aqui estão apresentadas as variáveis relacionadas ao ensino.
 
 ### Criando uma visualização
 
-## Inscrições por vaga
+## Razão de alunos inscritos por vaga em cursos de saúde
 
 ### Justificativa
 
@@ -286,7 +286,7 @@ Aqui estão apresentadas as variáveis relacionadas ao ensino.
 
 ### Criando uma visualização
 
-## Taxa de graduados
+## Taxa de graduados em cursos de saúde
 
 ### Justificativa
 
@@ -328,7 +328,7 @@ Aqui estão apresentadas as variáveis relacionadas ao ensino.
 
 ### Criando uma visualização
 
-## Qualidade de cursos
+## Qualidade de cursos de educação superior
 
 ### Justificativa
 

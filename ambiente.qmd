@@ -1,6 +1,6 @@
 # Indicadores de ambiente favorável
 
-## Violência
+## Taxa de mortalidade por homicídios
 
 ### Justificativa
 
@@ -44,7 +44,7 @@
 
 ### Criando uma visualização
 
-## Qualidade da educação no início do EF
+## Qualidade da educação nos anos iniciais do ensino fundamental
 
 ### Justificativa
 
@@ -84,7 +84,7 @@
 
 ### Criando uma visualização
 
-## Qualidade da educação no final do EF
+## Qualidade da educação nos anos finais do ensino fundamental
 
 ### Justificativa
 
@@ -124,7 +124,7 @@
 
 ### Criando uma visualização
 
-## Densidade de equipamentos
+## Densidade de equipamentos por população
 
 ### Justificativa
 
@@ -170,7 +170,7 @@
 
 ### Criando uma visualização
 
-## Vulnerabilidade
+## Vulnerabilidade social
 
 ### Justificativa
 
