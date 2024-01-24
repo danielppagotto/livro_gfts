@@ -1,5 +1,26 @@
 # Indicadores de ambiente favorável
 
+## Bibliotecas
+
+Iremos carregar as bibiotecas necessárias para carregar os códigos.
+
+```{r}
+#| warning: FALSE 
+#| output: FALSE  
+
+library(readr) 
+library(readxl) 
+library(dplyr) 
+library(genderBR) 
+library(microdatasus) 
+library(tidyverse) 
+library(DT) 
+library(mapview) 
+library(geobr) 
+library(forcats) 
+library(ggplot2)
+```
+
 ## Taxa de mortalidade por homicídios
 
 ### Justificativa
@@ -170,6 +191,27 @@
 
 ### Criando uma visualização
 
+```{r}
+#| warning: FALSE 
+#| output: FALSE 
+
+equipamento_parana <- read_csv("bases_apoio/equipamento_1000_habitantes.csv")
+```
+
+```{r}
+#| warning: FALSE
+#| eval: FALSE
+
+equipamento_parana %>%
+  mutate(regiao_saude = fct_reorder(regiao_saude, equipamento_1000_habitantes)) %>%
+  ggplot(aes(x = regiao_saude, y = equipamento_1000_habitantes)) +
+  geom_col(fill = "skyblue",color = "White") + 
+  coord_flip() + 
+  theme_bw() +
+  labs(x = "Regiões de Saúde", y = "Densidade de Equipamentos", 
+       title = "Quantidade de equipamentos por mil habitantes do Paraná")
+```
+
 ## Vulnerabilidade social
 
 ### Justificativa
@@ -209,3 +251,66 @@
 ### Calculando o indicador usando R
 
 ### Criando uma visualização
+
+## Quantidade de leitos de UTI
+
+### Justificativa
+
+### Ficha do indicador
+
++----------------------------------------------------------------------+--------------------------------------+
+| Nome do Indicador                                                    | Quantidade de leitos de UTI          |
++======================================================================+======================================+
+| Domínio                                                              | Ambiente favorável                   |
++----------------------------------------------------------------------+--------------------------------------+
+| Conceitos e definições                                               |                                      |
++----------------------------------------------------------------------+--------------------------------------+
+| Método de cálculo                                                    |                                      |
++----------------------------------------------------------------------+--------------------------------------+
+| Unidade de medida                                                    |                                      |
++----------------------------------------------------------------------+--------------------------------------+
+| Variáveis que compõem o indicador, fonte e instituições que a produz | Variável:                            |
+|                                                                      |                                      |
+|                                                                      | Fonte:                               |
+|                                                                      |                                      |
+|                                                                      | Instituição:                         |
++----------------------------------------------------------------------+--------------------------------------+
+| Abrangência geográfica                                               |                                      |
++----------------------------------------------------------------------+--------------------------------------+
+| Níveis de desagregação indicador                                     |                                      |
++----------------------------------------------------------------------+--------------------------------------+
+| Periodicidade de atualização do indicador                            |                                      |
++----------------------------------------------------------------------+--------------------------------------+
+| Série histórica utilizada                                            |                                      |
++----------------------------------------------------------------------+--------------------------------------+
+| Referências                                                          |                                      |
++----------------------------------------------------------------------+--------------------------------------+
+| Polaridade                                                           |                                      |
++----------------------------------------------------------------------+--------------------------------------+
+
+### Calculando o indicador usando R
+
+### Criando uma visualização
+
+```{r}
+#| warning: FALSE
+#| eval: FALSE
+#| echo: FALSE
+#| output: FALSE
+
+quantidade_leitos <- read_csv("bases_apoio/quantidade_leitos.csv")
+```
+
+```{r}
+#| warning: FALSE
+#| eval: FALSE
+#| echo: FALSE
+#| output: FALSE
+
+ggplot(quantidade_leitos, aes(x = ano, y = total_leitos_uti)) +
+  geom_line(color = "blue") +
+  labs(title = "Quantidade de Leitos de UTI ao Longo dos Anos em Belém",
+       x = "Ano",
+       y = "Total de Leitos de UTI")
+
+```

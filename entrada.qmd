@@ -1,5 +1,26 @@
 # Entrada no mercado de trabalho
 
+## Bibliotecas
+
+Iremos carregar as bibiotecas necessárias para carregar os códigos.
+
+```{r}
+#| warning: FALSE 
+#| output: FALSE 
+
+library(readr) 
+library(readxl) 
+library(dplyr) 
+library(genderBR) 
+library(microdatasus) 
+library(tidyverse) 
+library(DT) 
+library(mapview) 
+library(geobr) 
+library(forcats) 
+library(ggplot2)
+```
+
 ## Percentual de força de trabalho habilitada atuando em estabelecimentos de saúde
 
 ### Justificativa
